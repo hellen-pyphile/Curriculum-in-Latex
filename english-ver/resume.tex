@@ -1,0 +1,148 @@
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{}} &Email: \href{mailto:hds74062@gmail.com}{hds74062@gmail.com}\\
+  \end{tabular*}
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Large Hellen Araujo da Silva}} &Linkedin: \href{https://www.linkedin.com/in/hellen-araujo-da-silva-550b86322/}{Hellen Araujo}\\
+  \textbf{São Paulo, Brazil} & Mobile: +55-1194559-6923\\
+\end{tabular*}
+
+\section{Soft Skills}
+\resumeSubHeadingListStart
+    \item{\textbf{Conflicts Dealer}}
+    \item{\textbf{Strategically thinking and teamwork}}
+    \item{\textbf{Communication and transparency}}
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {PUC São Paulo}{São Paulo, São Paulo}
+      {Bachelor's Degree in Computer Science}{Feb. 2026 -- Dec. 2029}
+    \resumeSubheading
+      {ETEC Doutor Celso Giglio}{Osasco, São Paulo}
+      {Integrated High School with Technical Course in Systems Development}{Feb. 2022 -- Dec. 2024}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {CGTEC - ETEC Science Fair}{Osasco, São Paulo}
+      {High School Course's Final Project}{2024}
+     
+      \resumeItemListStart
+      \resumeItem{Project: }
+          {Genpsiq - Outreach and Academic Support Related to the Field of Psychiatric Genetics}
+          \resumeItem{Team Management: }
+          {Developed by a four-member technical team under faculty and specialist guidance at ETEC Dr. Celso Giglio, the project management relied on an iterative prototyping lifecycle—using shared design tools like Canva to refine initial website concepts into the final platform.}
+        \resumeItem{Requirement Gathering: }
+          {Requirements were identified through a qualitative survey conducted with 52 students at ETEC Dr. Celso Giglio, which revealed widespread difficulty in finding scientific papers (76.9\%), strong interest in psychiatric genetics (highlighted by 66.7\% having family members with psychiatric conditions), and the recognized need to combat scientific misinformation in Brazil.}
+        \resumeItem{Automation: }
+          {The system automates scientific paper indexing and filtering, alongside an interactive case evaluation tool built with PHP, JavaScript, HTML, and CSS that automatically validates clinical anamneses submitted by users, providing immediate feedback distinguishing valid from invalid psychiatric diagnostic reports.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {COTUCA}{Campinas, São Paulo}
+      {UniCamp's Science Fair}{2024}
+      \resumeItemListStart
+       \resumeItem{Project: }
+          {Genpsiq - Outreach and Academic Support Related to the Field of Psychiatric Genetics}
+      \resumeItemListEnd
+    \resumeSubheading
+      {A Journey of Knowledge and Innovation}{São Paulo, São Paulo}
+      {UNIFESP's Science Fair}{2024}   
+      \resumeItemListStart
+        \resumeItem{Project: }
+          {Genpsiq - Outreach and Academic Support Related to the Field of Psychiatric Genetics}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{\textbf{Languages}{: C\#, C++, C, CSS, HTML, Java, Javascript, Python, SQL}}
+     \item{\textbf{Testing Tools}{: Visual Studio, Visual Studio Code, CANVA}}
+      \item{\textbf{Mocking Framework}{: Telerik Mock}}
+ \resumeSubHeadingListEnd
+
+ \section{Languages}
+ \resumeSubHeadingListStart
+    \item{\textbf{Portuguese - native}}
+    \item{\textbf{English - intermediate}}
+    \item{\textbf{Spanish - basic}}
+\resumeSubHeadingListEnd
+    
+\end{document}
