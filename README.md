@@ -1,5 +1,34 @@
 # 📄 Curriculum-in-Latex
 
+Repository dedicated to the version control and compilation of my professional resume built with LaTeX.
+
+---
+
+## 📌 Quick View
+
+- 📥 **[View the PDF](/english-ver/resume_en.pdf)**
+
+---
+
+## 🛠️ Technologies & Tools
+
+- **LaTeX** (Compilation engine: `pdflatex` / `xelatex`)
+- **Git & GitHub** (Version control)
+
+---
+
+## 📁 Repository Structure
+
+```text
+├── portuguese-ver/
+│   ├── resume_pt.tex   # Main LaTeX source code
+│   └── resume_pt.pdf   # Compiled PDF document
+├── .gitignore          # Rules to ignore auxiliary build files
+└── README.md           # Repository documentation
+
+```
+# 📄 Curriculum-in-Latex
+
 Repositório dedicado ao versionamento e compilação do meu currículo profissional desenvolvido em LaTeX.
 
 ---
