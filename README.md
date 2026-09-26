@@ -6,7 +6,7 @@ Repositório dedicado ao versionamento e compilação do meu currículo profissi
 
 ## 📌 Visualização Rápida
 
-- 📥 **[Visualizar o PDF](/portuguer-ver/resume_pt.pdf)**
+- 📥 **[Visualizar o PDF](/portuguese-ver/resume_pt.pdf)**
 
 ---
 
