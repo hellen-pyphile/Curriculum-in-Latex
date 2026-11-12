@@ -1,158 +1,102 @@
-
-
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
+% ---------- Pacotes ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}                % fonte estilo Times New Roman
+\usepackage[top=1.5cm,bottom=1.5cm,left=1.8cm,right=1.8cm]{geometry}
 \usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
-\usepackage{fancyhdr}
+\usepackage[hidelinks,pdfusetitle]{hyperref}
+\usepackage{xcolor}
 
+% Texto selecionável/copiável e compatível com ATS
+\input{glyphtounicode}
+\pdfgentounicode=1
 
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\raggedbottom
 \urlstyle{same}
 
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
+% ---------- Seções ----------
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
 
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+% ---------- Comandos ----------
+\setlist[itemize]{leftmargin=1.2em,itemsep=1.5pt,topsep=2pt,parsep=0pt}
 
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
+% \entry{Título}{Local}{Subtítulo}{Período}
+\newcommand{\entry}[4]{%
+  \vspace{3pt}
+  \noindent\textbf{#1}\hfill #2\\
+  \textit{#3}\hfill\textit{#4}\par
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
-\renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \skill{Categoria}{Itens}
+\newcommand{\skill}[2]{\noindent\textbf{#1:} #2\par\vspace{2pt}}
 
 
 \begin{document}
 
-%----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{}} &Email: \href{mailto:hds74062@gmail.com}{hds74062@gmail.com}\\
-  \end{tabular*}
-  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\Large Hellen Araujo da Silva}} &Linkedin: \href{https://www.linkedin.com/in/hellen-araujo-da-silva-550b86322/}{Hellen Araujo}\\
-  \textbf{São Paulo, Brasil} & Celular: +55-1194559-6923\\
-\end{tabular*}
+% ---------- Header ----------
+\begin{center}
+  {\LARGE\bfseries Hellen Araujo da Silva}\\[4pt]
+  São Paulo, SP \textbar{} \href{mailto:hds74062@gmail.com}{hds74062@gmail.com} \\
+  \href{https://www.linkedin.com/in/hellen-araujo-da-silva-550b86322/}{linkedin.com/in/hellen-araujo-da-silva}
+  \textbar{} \href{https://github.com/hellen-pyphile}{github.com/hellen-pyphile}
+\end{center}
 
-\section{Soft Skills}
-\resumeSubHeadingListStart
-    \item{\textbf{Conflicts Dealer}}
-    \item{\textbf{Strategically thinking and teamwork}}
-    \item{\textbf{Communication and transparency}}
-\resumeSubHeadingListEnd
+% ---------- Summary ----------
+\section{Summary}
+Computer Science student at PUC-SP with a technical background in Systems Development,
+hands-on experience in full-stack web development and user research.
+Seeking an internship in software development.
 
-%-----------EDUCATION-----------------
-\section{Formação Acadêmica}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-    {PUC São Paulo}{São Paulo, São Paulo}
-      {Graduation on Computer Science}{Feb. 2026 -- Dec. 2029}
-    \resumeSubheading
-      {ETEC Doutor Celso Giglio}{Osasco, São Paulo}
-      {Integrated High School with Technical Course in Systems Development}{Feb. 2022 -- Dec. 2024}
-  \resumeSubHeadingListEnd
+% ---------- Education ----------
+\section{Education}
+\entry{Pontifical Catholic University of São Paulo (PUC-SP)}{São Paulo, SP}
+  {Bachelor's Degree in Computer Science}{Feb. 2026 -- Dec. 2029}
+\entry{Escola Técnica Estadual Dr. Celso Giglio (ETEC)}{Osasco, SP}
+  {Integrated High School with Technical Degree in Systems Development}{Feb. 2022 -- Dec. 2024}
 
-%-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumeSubHeadingListStart
+% ---------- Projects ----------
+\section{Projects}
+\entry{Genpsiq -- Outreach and Academic Support in Psychiatric Genetics}{}
+  {Technical Course Capstone Project (ETEC)}{2024}
+\begin{itemize}
+  \item \textbf{Stack:} web platform built with HTML5, CSS3 (responsive interface),
+        JavaScript (client-side interactivity) and PHP (server-side business logic).
+  \item \textbf{Research and design:} requirements gathered through a survey of
+        52 students, of whom 76.9\% reported difficulty finding scientific
+        papers; iterative prototyping in Canva to refine usability.
+  \item \textbf{Features:} user authentication (sign-up and login); file management
+        (PDF and DOCX uploads, ID-based indexing, filtered search and deletion);
+        clinical case simulator that automatically validates anamneses and
+        psychological reports.
+\end{itemize}
 
-  \resumeSubheading
-      {PUCTech}{São Paulo, São Paulo}
-      {Academic League of Science and Technology}{2026}
-      \resumeItemListStart
-       \resumeItem{Member}
-          {People and project development team}
-        \resumeItem{Trainee}  
-          {People}
-      \resumeItemListEnd
+% ---------- Experience / Activities ----------
+\section{Experience and Activities}
+\entry{PUCTech -- Academic League of Science and Technology}{São Paulo, SP}
+  {Member (People team and project development)}{2026}
 
-    \resumeSubheading
-      {CGTEC - ETEC Science Fair}{Osasco, São Paulo}
-      {High School Course's Final Project}{2024}
-     
-      \resumeItemListStart
-      \resumeItem{Project: }
-          {Genpsiq - Outreach and Academic Support Related to the Field of Psychiatric Genetics}
-          \resumeItem{Team Management: }
-          {Developed by a four-member technical team under faculty and specialist guidance at ETEC Dr. Celso Giglio, the project management relied on an iterative prototyping lifecycle—using shared design tools like Canva to refine initial website concepts into the final platform.}
-        \resumeItem{Requirement Gathering}
-          {Requirements were identified through a qualitative survey conducted with 52 students at ETEC Dr. Celso Giglio, which revealed widespread difficulty in finding scientific papers (76.9\%), strong interest in psychiatric genetics (accentuated by 66.7\% having family members with psychiatric conditions), and the recognized need to combat scientific misinformation in Brazil.}
-        \resumeItem{Automation: }
-          {The system automates scientific paper indexing and filtering, alongside an interactive case evaluation tool built with PHP, JavaScript, HTML, and CSS that automatically validates clinical anamneses submitted by users—providing immediate corrective feedback between valid and invalid psychiatric diagnostic reports.}
-      \resumeItemListEnd
+\entry{Science Fairs}{}{Presentation of the Genpsiq project}{2024}
+\begin{itemize}
+  \item CGTEC -- ETEC Science Fair (Osasco, SP)
+  \item COTUCA -- UNICAMP Science Fair (Campinas, SP)
+  \item A Journey of Knowledge and Innovation -- UNIFESP Science Fair (São Paulo, SP)
+\end{itemize}
 
-    \resumeSubheading
-      {COTUCA}{Campinas, São Paulo}
-      {UniCamp's Science Fair}{2024}
-      \resumeItemListStart
-       \resumeItem{Project: }
-          {Genpsiq - Outreach and Academic Support Related to the Field of Psychiatric Genetics}
-      \resumeItemListEnd
-    \resumeSubheading
-      {A Journey of Knowledge and Innovation}{São Paulo, São Paulo}
-      {UNIFESP's Science Fair}{2024}   
-      \resumeItemListStart
-        \resumeItem{Project: }
-          {Genpsiq - Outreach and Academic Support Related to the Field of Psychiatric Genetics}
-      \resumeItemListEnd
+% ---------- Technical skills ----------
+\section{Technical Skills}
+\skill{Languages}{Python, Java, C, C++, C\#, JavaScript, SQL, HTML, CSS}
+\skill{Python (libraries and frameworks)}{FastAPI, Pydantic, Requests, Kivy, IPython, json, os}
+\skill{C / C++}{C Standard Library (stdio, stdlib, string); STL (vector, iostream, iomanip)}
 
-  \resumeSubHeadingListEnd
+% ---------- Languages and soft skills ----------
+\section{Languages and Soft Skills}
+\skill{Languages}{Portuguese (native) \textbar{} English (intermediate) \textbar{} Spanish (basic)}
+\skill{Soft skills}{conflict mediation, strategic thinking, teamwork, communication and transparency}
 
-%--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
- \resumeSubHeadingListStart
-   \item{\textbf{Languages}{: C\#, C++, C, CSS, HTML, Java, Javascript, Python, SQL}}
-     \item{\textbf{Testing Tools}{: Visual Studio, Visual Studio Code, CANVA}}
- \resumeSubHeadingListEnd
-
- \section{Languages}
- \resumeSubHeadingListStart
-    \item{\textbf{Portuguese - native}}
-    \item{\textbf{English - intermediary}}
-    \item{\textbf{Espanish - basic}}
-\resumeSubHeadingListEnd
-    
 \end{document}
