@@ -1,152 +1,103 @@
+\documentclass[a4paper,11pt]{article}
 
-\documentclass[timesnewroman,12pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
-\usepackage{fancyhdr}
+% ---------- Pacotes ----------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\IfFileExists{brazilian.ldf}{\usepackage[brazilian]{babel}}{}
+\usepackage{mathptmx}                % fonte estilo Times New Roman
+\usepackage[top=1.5cm,bottom=1.5cm,left=1.8cm,right=1.8cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks,pdfusetitle]{hyperref}
+\usepackage{xcolor}
 
+% Texto selecionável/copiável e compatível com ATS
+\input{glyphtounicode}
+\pdfgentounicode=1
 
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\raggedbottom
+\hyphenpenalty=10000 \exhyphenpenalty=10000
 \urlstyle{same}
 
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
+% ---------- Seções ----------
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
 
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+% ---------- Comandos ----------
+\setlist[itemize]{leftmargin=1.2em,itemsep=1.5pt,topsep=2pt,parsep=0pt}
 
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
+% \entry{Título}{Local}{Subtítulo}{Período}
+\newcommand{\entry}[4]{%
+  \vspace{3pt}
+  \noindent\textbf{#1}\hfill #2\\
+  \textit{#3}\hfill\textit{#4}\par
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
-\renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% \skill{Categoria}{Itens}
+\newcommand{\skill}[2]{\noindent\textbf{#1:} #2\par\vspace{2pt}}
 
 \begin{document}
 
-%----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{}} &E-mail: \href{mailto:hds74062@gmail.com}{hds74062@gmail.com}\\
-  \end{tabular*}
-  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\Large Hellen Araujo da Silva}} &Linkedin: \href{https://www.linkedin.com/in/hellen-araujo-da-silva-550b86322/}{Hellen Araujo}\\
-  \textbf{São Paulo, Brasil} & Celular: +55-11-94559-6923\\
-\end{tabular*}
+% ---------- Cabeçalho ----------
+\begin{center}
+  {\LARGE\bfseries Hellen Araujo da Silva}\\[4pt]
+  São Paulo, SP \textbar{} \href{mailto:hds74062@gmail.com}{hds74062@gmail.com} \\
+  \href{https://www.linkedin.com/in/hellen-araujo-da-silva-550b86322/}{linkedin.com/in/hellen-araujo-da-silva}
+  \textbar{} \href{https://github.com/hellen-pyphile}{github.com/hellen-pyphile}
+\end{center}
 
-%-----------EDUCATION-----------------
+% ---------- Resumo ----------
+\section{Resumo}
+Estudante de Ciência da Computação (PUC-SP) com formação técnica em Desenvolvimento
+de Sistemas, experiência em desenvolvimento web full stack e em pesquisa com usuários.
+Busco oportunidade de estágio em desenvolvimento de software.
+
+% ---------- Formação ----------
 \section{Formação Acadêmica}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-    {Pontifícia Universitária Católica de São Paulo (PUC-SP) }{São Paulo, São Paulo}
-      {Bacharelado em Ciência da Computação}{Fev. 2026 -- Dez. 2029}
-    \resumeSubheading
-      {Escola Técnica Estadual Doutor Celso Giglio (ETEC)}{Osasco, São Paulo}
-      {Ensino Médio Integrado ao Curso Técnico em Desenvolvimento de Sistemas}{Fev. 2022 -- Dez. 2024}
-  \resumeSubHeadingListEnd
+\entry{Pontifícia Universidade Católica de São Paulo (PUC-SP)}{São Paulo, SP}
+  {Bacharelado em Ciência da Computação}{Fev. 2026 -- Dez. 2029}
+\entry{Escola Técnica Estadual Dr. Celso Giglio (ETEC)}{Osasco, SP}
+  {Ensino Médio Integrado ao Técnico em Desenvolvimento de Sistemas}{Fev. 2022 -- Dez. 2024}
 
-%-----------EXPERIENCE-----------------
-\section{Experiência}
-  \resumeSubHeadingListStart
+% ---------- Projetos ----------
+\section{Projetos}
+\entry{Genpsiq -- Divulgação e Apoio Acadêmico em Genética Psiquiátrica}{}
+  {Trabalho de Conclusão de Curso Técnico (ETEC)}{2024}
+\begin{itemize}
+  \item \textbf{Stack:} plataforma web com HTML5, CSS3 (interface responsiva),
+        JavaScript (interatividade no cliente) e PHP (regras de negócio no servidor).
+  \item \textbf{Pesquisa e design:} levantamento com 52 estudantes, dos quais 76,9\%
+        relataram dificuldade para encontrar artigos científicos; prototipação
+        iterativa no Canva para refinar a usabilidade.
+  \item \textbf{Funcionalidades:} autenticação (login e cadastro); gerenciamento de
+        arquivos (upload restrito a PDF e DOCX, indexação por ID, busca filtrada e
+        exclusão); simulador de casos clínicos com validação automatizada de
+        anamneses e relatórios psicológicos.
+\end{itemize}
 
-    \resumeSubheading
-      {PUCTech}{São Paulo, São Paulo}
-      {Liga Acadêmica de Ciência e Tecnologia}{2026}
-      \resumeItemListStart
-       \resumeItem{Membro}
-          {Time de pessoas e desenvolvimento de projetos}
-      \resumeItemListEnd
+% ---------- Experiência / Atividades ----------
+\section{Experiência e Atividades}
+\entry{PUCTech -- Liga Acadêmica de Ciência e Tecnologia}{São Paulo, SP}
+  {Membro (Time de Pessoas e desenvolvimento de projetos)}{2026}
 
-    \resumeSubheading
-      {Genpsiq - Divulgação e Apoio Acadêmico Relacionados à Área de Genética Psiquiátrica}{}
-      {}
+\entry{Feiras de Ciências}{}{Apresentação do projeto Genpsiq}{2024}
+\begin{itemize}
+  \item CGTEC -- Feira de Ciências da ETEC (Osasco, SP)
+  \item COTUCA -- Feira de Ciências da UNICAMP (Campinas, SP)
+  \item Uma Jornada de Conhecimento e Inovação -- Feira de Ciências da UNIFESP (São Paulo, SP)
+\end{itemize}
 
-      \resumeItemListStart
-          \resumeItem{Gestão de Equipe: }
-          {Desenvolvido por uma equipe técnica de quatro integrantes, sob orientação de docentes e especialistas da ETEC Dr. Celso Giglio, o gerenciamento do projeto seguiu um ciclo iterativo de prototipagem, utilizando ferramentas colaborativas de design, como o Canva, para refinar os conceitos iniciais do site até a plataforma final.}
-        \resumeItem{Levantamento de Requisitos: }
-          {Os requisitos foram identificados por meio de uma pesquisa qualitativa realizada com 52 estudantes da ETEC Dr. Celso Giglio, que revelou grande dificuldade em encontrar artigos científicos (76,9\%), forte interesse em genética psiquiátrica (evidenciado pelos 66,7\% que possuem familiares com condições psiquiátricas) e a necessidade reconhecida de combater a desinformação científica no Brasil.}
-        \resumeItem{Automação: }
-          {O sistema automatiza a indexação e filtragem de artigos científicos, além de contar com uma ferramenta interativa de avaliação de casos, desenvolvida em PHP, JavaScript, HTML e CSS, que valida automaticamente anamneses clínicas enviadas pelos usuários, fornecendo feedback imediato ao distinguir laudos psiquiátricos válidos de inválidos.}
-      \resumeItemListEnd
+% ---------- Habilidades técnicas ----------
+\section{Habilidades Técnicas}
+\skill{Linguagens}{Python, Java, C, C++, C\#, JavaScript, SQL, HTML, CSS}
+\skill{Python (bibliotecas e frameworks)}{FastAPI, Pydantic, Requests, Kivy, IPython, json, os}
+\skill{C / C++}{C Standard Library (stdio, stdlib, string); STL (vector, iostream, iomanip)}
 
-    \resumeSubheading
-      {CGTEC - Feira de Ciências da ETEC}{Osasco, São Paulo}
-      {Projeto de Conclusão do Curso Técnico}{2024}
-      
-    \resumeSubheading
-      {COTUCA}{Campinas, São Paulo}
-      {Feira de Ciências da UniCamp}{2024}
-      
-    \resumeSubheading
-      {Uma Jornada de Conhecimento e Inovação}{São Paulo, São Paulo}
-      {Feira de Ciências da UNIFESP}{2024}   
+% ---------- Idiomas e competências ----------
+\section{Idiomas e Competências}
+\skill{Idiomas}{Português (nativo) \textbar{} Inglês (intermediário) \textbar{} Espanhol (básico)}
+\skill{Competências}{mediação de conflitos, pensamento estratégico, trabalho em equipe, comunicação e transparência}
 
-  \resumeSubHeadingListEnd
-
-%--------PROGRAMMING SKILLS------------
-\section{Habilidades de Programação}
- \resumeSubHeadingListStart
-   \item{\textbf{Linguagens}{: C\#, C++, C, CSS, HTML, Java, Javascript, Python, SQL}}
-     \item{\textbf{Bibliotecas}{: }}
- \resumeSubHeadingListEnd
-
- \section{Idiomas}
- \resumeSubHeadingListStart
-    \item{\textbf{Português - nativo}}
-    \item{\textbf{Inglês - intermediário}}
-    \item{\textbf{Espanhol - básico}}
-\resumeSubHeadingListEnd
-
-\section{Habilidades Interpessoais}
-\resumeSubHeadingListStart
-    \item{\textbf{Mediação de conflitos}}
-    \item{\textbf{Pensamento Estratégico e trabalho em equipe}}
-    \item{\textbf{Comunicação e transparência}}
-\resumeSubHeadingListEnd
-    
 \end{document}
